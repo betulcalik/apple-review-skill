@@ -37,7 +37,7 @@ What it covers: offensive, insensitive, upsetting, disgusting, poor-taste, or "c
 3. **Ability to block abusive users** — block from profile or from any piece of content; blocked users' content disappears for the blocker.
 4. **Published contact information** — reachable contact (email/support page) inside the app, not only on a website.
 
-Missing any one of the four = rejection, essentially automatically. See `references/social-media.md` for the full deep-dive: implementation guidance, code-evidence patterns, review-note phrasing, and the worse 1.2 rejection ("app used primarily for objectionable content") that moderation features do not cure.
+Missing any one of the four = rejection, essentially automatically. See `references/by-app-type/social-ugc.md` for the full deep-dive: implementation guidance, code-evidence patterns, review-note phrasing, and the worse 1.2 rejection ("app used primarily for objectionable content") that moderation features do not cure.
 
 ### Removal-without-notice patterns (moderation does not save these)
 

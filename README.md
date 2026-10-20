@@ -41,6 +41,7 @@ Reading the guidelines is not enough — you need to check your *actual project*
 | Area | Contents |
 | --- | --- |
 | **Guidelines 1–5, every rule** | 1.1–1.7 Safety · 2.1–2.5.19 Performance · 3.1–3.2.2 Business · 4.1–4.10 Design · 5.1–5.6.4 Legal — including the Oct 2026 additions: creator age gating `1.2.1(a)`, creative assets `2.3.14`, hidden features `2.5.19`, revised external-purchase-link rules `3.1.1(a)` |
+| **Category checklists — every app type** | 19 deep-dives in [`references/by-app-type/`](./references/by-app-type/README.md): universal + social/UGC · games · kids · education · health/medical · finance · crypto/web3 · e-commerce · media/streaming · photo/video · dating · AI apps · VPN/security · gambling · business/SaaS · macOS & other platforms · travel/food · lifestyle/sports/weather |
 | **Social media / UGC deep dive** | The 1.2 four-feature checklist (filter · report · block · contact) with implementation bars, the fatal "used primarily for objectionable content" patterns (Chatroulette, anonymous chat, hot-or-not), NSFW web-toggle carve-out, age ratings, forced-login rules, contact-upload rules, social monetization (coins/boosts/tips), push rules |
 | **Rejection case database** | Real rejection message shapes keyed by guideline, classified by response type (binary / metadata / information-needed / removal), with the fixes that resolved them |
 | **Upload gate** | ITMS-91053 privacy manifests, 90809 deprecated APIs, 90683 purpose strings, signing & icon families + a pre-upload sweep |
@@ -72,6 +73,32 @@ Reading the guidelines is not enough — you need to check your *actual project*
 ```
 
 Post-rejection mode: paste Apple's message → match against the case database → classify the response type → fix plan + drafted Resolution Center reply.
+
+## By app category
+
+After the five guideline sections, the audit loads a category checklist for **every app type the project matches** — categories stack (a social fitness app reads both `social-ugc` and `health-fitness`). Full index: [`references/by-app-type/`](./references/by-app-type/README.md).
+
+| Checklist | App type |
+|---|---|
+| [all-apps.md](./references/by-app-type/all-apps.md) | Universal — every submission |
+| [social-ugc.md](./references/by-app-type/social-ugc.md) | Social / User-Generated Content |
+| [games.md](./references/by-app-type/games.md) | Games, loot boxes, emulators |
+| [kids-family.md](./references/by-app-type/kids-family.md) | Kids Category / children-primary |
+| [education.md](./references/by-app-type/education.md) | Education / classroom |
+| [health-fitness.md](./references/by-app-type/health-fitness.md) | Health, Fitness & Medical |
+| [finance-fintech.md](./references/by-app-type/finance-fintech.md) | Banking, investing, lending, insurance |
+| [crypto-web3.md](./references/by-app-type/crypto-web3.md) | Crypto, NFT, web3 |
+| [ecommerce-marketplaces.md](./references/by-app-type/ecommerce-marketplaces.md) | Shopping, delivery, marketplaces, booking |
+| [media-entertainment.md](./references/by-app-type/media-entertainment.md) | Streaming, music, books, news, reader apps |
+| [photo-video-creative.md](./references/by-app-type/photo-video-creative.md) | Photo/video editing, creative tools |
+| [dating.md](./references/by-app-type/dating.md) | Dating |
+| [ai-apps.md](./references/by-app-type/ai-apps.md) | AI / generative AI / chatbots |
+| [vpn-privacy-security.md](./references/by-app-type/vpn-privacy-security.md) | VPN, MDM, security, parental control |
+| [gambling-contests.md](./references/by-app-type/gambling-contests.md) | Gambling, betting, sweepstakes |
+| [business-productivity.md](./references/by-app-type/business-productivity.md) | Business / SaaS / productivity |
+| [macos-platforms.md](./references/by-app-type/macos-platforms.md) | macOS, tvOS, watchOS, App Clips, extensions |
+| [travel-food.md](./references/by-app-type/travel-food.md) | Travel, navigation, food, rideshare |
+| [lifestyle-sports-weather.md](./references/by-app-type/lifestyle-sports-weather.md) | Lifestyle, habits, sports, weather |
 
 ## Install
 
@@ -117,7 +144,7 @@ references/
   03-business.md                # 3.1–3.2.2 IAP, subscriptions, exceptions, crypto
   04-design.md                  # 4.1–4.10 copycats, spam, login, extensions
   05-legal.md                   # 5.1–5.6.4 privacy, IP, gambling, VPN, conduct
-  social-media.md               # deep dive: UGC / social app audit
+  by-app-type/                  # category checklists (index below)
   rejection-cases.md            # real rejection messages + fixes, by guideline
   upload-errors.md              # ITMS-* upload validation + pre-upload sweep
   appeals.md                    # Resolution Center, appeals, expedite playbook

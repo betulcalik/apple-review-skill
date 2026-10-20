@@ -45,7 +45,29 @@ You are acting as a rigorous App Review auditor. Your job is to find, with evide
 First determine, from the repo:
 
 - **Stack:** native Xcode project (`*.xcodeproj`/`*.xcworkspace` + Swift/ObjC sources), React Native (`package.json` + `ios/`), Expo (`app.json`/`app.config.*`, possibly prebuild), Flutter (`pubspec.yaml` + `ios/`), or something else.
-- **App type flags that unlock deep-dives:** user-generated content or social features (→ read `references/social-media.md` in full), subscriptions/IAP, kids audience, health/medical, finance/crypto, gambling, VPN/MDM, AI content generation, live streaming, dating.
+- **App categories that unlock deep-dives** (detect from code, metadata strings, dependencies, and the user's description — categories stack, e.g. a social fitness app reads two files):
+
+  | Detected category | Read next
+  |---|---|
+  | any app (always) | `references/by-app-type/all-apps.md` |
+  | social / UGC / chat / communities | `references/by-app-type/social-ugc.md` |
+  | games (any genre, streaming, emulators) | `references/by-app-type/games.md` |
+  | kids / children-primary | `references/by-app-type/kids-family.md` |
+  | education / classroom | `references/by-app-type/education.md` |
+  | health / fitness / medical | `references/by-app-type/health-fitness.md` |
+  | finance / banking / lending / insurance | `references/by-app-type/finance-fintech.md` |
+  | crypto / NFT / web3 | `references/by-app-type/crypto-web3.md` |
+  | shopping / delivery / marketplace / booking | `references/by-app-type/ecommerce-marketplaces.md` |
+  | streaming / music / video / books / news / reader | `references/by-app-type/media-entertainment.md` |
+  | photo/video editors / creative tools | `references/by-app-type/photo-video-creative.md` |
+  | dating | `references/by-app-type/dating.md` |
+  | AI / generative / chatbots | `references/by-app-type/ai-apps.md` |
+  | VPN / security / MDM / parental control | `references/by-app-type/vpn-privacy-security.md` |
+  | gambling / betting / contests | `references/by-app-type/gambling-contests.md` |
+  | business / SaaS / productivity / dev tools | `references/by-app-type/business-productivity.md` |
+  | macOS / tvOS / watchOS / App Clips / extensions | `references/by-app-type/macos-platforms.md` |
+  | travel / navigation / food / rideshare | `references/by-app-type/travel-food.md` |
+  | lifestyle / habits / sports / weather / horoscope | `references/by-app-type/lifestyle-sports-weather.md` |
 - **Mode:** one of
   - **pre-submission audit** (default) — full sweep, Steps 1–6;
   - **post-rejection triage** — the user pastes Apple's rejection message; start at Step 7;
@@ -126,9 +148,9 @@ Be honest in the verdict: "no P0/P1 found, residual risk concentrated in X" is a
 
 ## Deep-dive triggers
 
-Read these on top of the section files when the inventory trips them:
+Read these on top of the section files when the inventory or category detection trips them:
 
-- **Any UGC or social feature** — comments, posts, profiles, chat/DMs, follows, media uploads, communities, AI-generated content shared between users → `references/social-media.md` (mandatory; 1.2 is the single most common social-app rejection and Apple checks it as a literal four-item checklist).
+- **Category checklists** — after Step 0 detects the app's categories, read every matching file in `references/by-app-type/` (see the routing table above; `all-apps.md` is always read). These add category-specific rejection patterns, audit specifics, and pre-submission checklists the section files don't carry.
 - **Any rejection message from Apple** → `references/rejection-cases.md`, then `references/appeals.md`.
 - **Upload failure / email from App Store Connect with "ITMS-"** → `references/upload-errors.md`.
 

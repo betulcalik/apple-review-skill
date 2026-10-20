@@ -10,3 +10,18 @@ Initial release.
 - Rejection case database keyed by guideline with response-type classification (binary / metadata / information-needed / removal).
 - Upload validation (ITMS-*) reference and pre-upload sweep.
 - Rejection-response playbook: Resolution Center reply structure and templates, appeals, expedited review, bug-fix submissions.
+
+## 1.1.0 — 2026-10-20
+
+Category checklists: full by-app-type coverage.
+
+- New `references/by-app-type/` with 19 category deep-dives + index:
+  all-apps (universal), social-ugc (moved from references/social-media.md),
+  games, kids-family, education, health-fitness, finance-fintech,
+  crypto-web3, ecommerce-marketplaces, media-entertainment,
+  photo-video-creative, dating, ai-apps, vpn-privacy-security,
+  gambling-contests, business-productivity, macos-platforms, travel-food,
+  lifestyle-sports-weather.
+- SKILL.md Step 0 now routes detected app categories to their checklists
+  (categories stack); deep-dive triggers rewritten accordingly.
+- README: "By app category" index table added.
