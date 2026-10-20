@@ -123,12 +123,11 @@ references/
   appeals.md                    # Resolution Center, appeals, expedite playbook
 ```
 
-## Sources & credits
+## Sources
 
 - Apple's [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) and [news updates](https://developer.apple.com/news/) — paraphrased and summarized, current through the 2026-10-16 revision
 - Apple's [App Store Transparency Reports](https://www.apple.com/legal/app-store/transparency/)
-- Public documentation of real rejections (appstorereject.com, Apple Developer Forums, Stack Overflow)
-- Prior art studied for structure: [safaiyeh/app-store-review-skill](https://github.com/safaiyeh/app-store-review-skill) · [cruisediary/apple-app-review-skills](https://github.com/cruisediary/apple-app-review-skills) · [UppercutLabs/heimdall](https://github.com/UppercutLabs/heimdall) — this repo aims to be the most complete and best-organized of them
+- Real-world rejection reports shared publicly by developers (rejection letters, Apple Developer Forums, Stack Overflow)
 
 **Maintenance:** Apple revises the guidelines several times a year. Check [developer.apple.com/news](https://developer.apple.com/news/) before trusting findings near a submission date. PRs welcome — especially new real-world rejection cases (paste the rejection text + what fixed it).
 
